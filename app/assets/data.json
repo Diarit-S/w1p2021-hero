@@ -1,0 +1,35 @@
+{
+  "step1" : {
+    "id" : 1,
+    "message": [
+      "Allô ? Quelqu'un me recois ?", 
+      "... Allô !"
+    ],
+    "choix" : {
+      "firstChoice" : "Qui est-ce ?",
+      "secondChoice" : "Je vous reçois"
+    }
+  },
+  "step2" : {
+    "id" : 2,
+    "message": [
+      "Allô ? Quelqu'un me recois ?", 
+      "... Allô !"
+    ],
+    "choix" : {
+      "firstChoice" : "Qui est-ce ?",
+      "secondChoice" : "Je vous reçois"
+    }
+  },
+  "step3" : {
+    "id" : 3,
+    "message": [
+      "Allô ? Quelqu'un me recois ?", 
+      "... Allô !"
+    ],
+    "choix" : {
+      "firstChoice" : "Qui est-ce ?",
+      "secondChoice" : "Je vous reçois"
+    }
+  }
+}
