@@ -1,8 +1,8 @@
 <template>
   <div class="big-header">
-    <h1></h1>
+    <h1>Win</h1>
     <br />
-    <router-link class="button" to="/character">Go to Character</router-link>
+    <router-link class="button" to="/">Go to Home</router-link>
   </div>
 </template>
 

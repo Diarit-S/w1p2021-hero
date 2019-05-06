@@ -1,35 +1,42 @@
 {
-  "step1" : {
-    "id" : 1,
-    "message": [
-      "Allô ? Quelqu'un me recois ?", 
-      "... Allô !"
-    ],
-    "choix" : {
-      "firstChoice" : "Qui est-ce ?",
-      "secondChoice" : "Je vous reçois"
-    }
+  "1" : {
+    "messages": {
+      "first": "Allo ? qelqu'un me reçoit ?",
+      "second": "Est-ce que quelqu'un m'entend ?"
+    },
+    "btnA": "Qui est-ce ?",
+    "btnB": "Oui je vous reçois",
+    "actionA" : "/game/3",
+    "actionB" : "/game/2"
   },
-  "step2" : {
-    "id" : 2,
-    "message": [
-      "Allô ? Quelqu'un me recois ?", 
-      "... Allô !"
-    ],
-    "choix" : {
-      "firstChoice" : "Qui est-ce ?",
-      "secondChoice" : "Je vous reçois"
-    }
+  "2" : {
+    "messages": {
+      "first": "Dieu soit loué, je ne suis pas seul..",
+      "second": "Pouvez vous me ou je suis ?"
+    },
+    "btnA": "Qui est-ce ?",
+    "btnB": "Oui je vous reçois",
+    "actionA" : "/game/3",
+    "actionB" : "/game/2"
   },
-  "step3" : {
-    "id" : 3,
-    "message": [
-      "Allô ? Quelqu'un me recois ?", 
-      "... Allô !"
-    ],
-    "choix" : {
-      "firstChoice" : "Qui est-ce ?",
-      "secondChoice" : "Je vous reçois"
-    }
+  "3" : {
+    "messages": {
+      "first": "Merde, je suis dans un pétrin",
+      "second": "S'il vous plait j'ai besoin de vous"
+    },
+    "btnA": "Qui est-ce ?",
+    "btnB": "Oui je vous reçois",
+    "actionA" : "/game/3",
+    "actionB" : "/game/2"
+  },
+  "4" : {
+    "messages": {
+      "first": "J'ai besoin que vous me guidiez",
+      "second": "Je ne sais pas ou je suis ni ce que je dois faire"
+    },
+    "btnA": "Qui est-ce ?",
+    "btnB": "Oui je vous reçois",
+    "actionA" : "/game/3",
+    "actionB" : "/game/2"
   }
 }
