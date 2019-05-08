@@ -4,12 +4,17 @@
     <br />
     <!-- <router-link class="button" to="/game/">Go to Game</router-link> -->
     <!-- <div v-for="elt in messages" :key="elt">{{'ok'}}</div> -->
-    <ul class="msg-list"><li v-for="msg in msgTable" :key="msg">{{msg}}</li></ul>
+    <ul class="msg-list"><li class="message" v-for="msg in msgTable" :key="msg">{{msg}}</li></ul>
     <br>
-    <router-link class="button" :to="actionA">{{btnA}}</router-link>
     <br>
-    <!-- <router-link class="button" @click="addStepOnTable">{{btnB}}</router-link> -->
-    <router-link class="button" :to="actionB" >{{btnB}}</router-link>
+    <div class="btn-container">
+      <router-link class="button" :to="actionA">{{btnA}}
+        <button class="in-button" v-on:click="addChoiceOnTable(btnA)"></button>
+      </router-link>
+      <router-link class="button" :to="actionB">{{btnB}}
+        <button class="in-button" v-on:click="addChoiceOnTable(btnB)"></button>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -44,16 +49,22 @@ export default {
     },
     addScene(){
       return json[this.id].scene
-    }
+    },
+    
   },
   methods : {
     addMsgOnTable(){    
         let stepMsgList = json[this.id].messages
         Object.keys(stepMsgList).forEach(item => {
-          this.msgTable.push(stepMsgList[item]);
+          if (!this.msgTable.includes(stepMsgList[item])) {
+            this.msgTable.push(stepMsgList[item]);
+          }
         });
         console.log(this.msgTable);
-    }
+    },
+    addChoiceOnTable(value){
+      this.msgTable.push(value);
+    },
   }
 };
 </script>

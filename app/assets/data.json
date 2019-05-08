@@ -15,8 +15,8 @@
       "first": "Dieu soit loué, je ne suis pas seul..",
       "second": "Pouvez vous me dire ou je suis ?"
     },
-    "btnA": "Qui est-ce ?",
-    "btnB": "Oui je vous reçois",
+    "btnA": "Mais qui êtes vous ?",
+    "btnB": "D'accord",
     "actionA" : "/game/3",
     "actionB" : "/game/2",
     "scene" : "light-scene"
@@ -26,8 +26,8 @@
       "first": "Merde, je suis dans un pétrin",
       "second": "S'il vous plait j'ai besoin de vous"
     },
-    "btnA": "Qui est-ce ?",
-    "btnB": "Oui je vous reçois",
+    "btnA": "Oui mais bon",
+    "btnB": "Très bien",
     "actionA" : "/game/3",
     "actionB" : "/game/2"
   },
