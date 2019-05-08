@@ -4,7 +4,7 @@
     <br />
     <!-- <router-link class="button" to="/game/">Go to Game</router-link> -->
     <!-- <div v-for="elt in messages" :key="elt">{{'ok'}}</div> -->
-    <ul class="msg-list"><li class="message" v-for="msg in msgTable" :key="msg">{{msg}}</li></ul>
+    <ul ref="msgList" class="msg-list"><li class="message" v-for="msg in msgTable" :key="msg">{{msg}}</li></ul>
     <br>
     <br>
     <div class="btn-container">
@@ -39,6 +39,7 @@ export default {
     },
     actionA(){
       this.addMsgOnTable();
+      this.doScroll();
       return json[this.id].actionA
     },
     btnB(){
@@ -64,6 +65,12 @@ export default {
     },
     addChoiceOnTable(value){
       this.msgTable.push(value);
+    },
+    doScroll(){
+      setTimeout(() => {
+        let x = document.querySelector('.msg-list');
+        x.scrollTop = x.scrollHeight;
+      }, 200);
     },
   }
 };
