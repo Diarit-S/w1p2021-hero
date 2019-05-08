@@ -7,17 +7,19 @@
     "btnA": "Qui est-ce ?",
     "btnB": "Oui je vous reçois",
     "actionA" : "/game/3",
-    "actionB" : "/game/2"
+    "actionB" : "/game/2",
+    "scene" : "dark-scene"
   },
   "2" : {
     "messages": {
       "first": "Dieu soit loué, je ne suis pas seul..",
-      "second": "Pouvez vous me ou je suis ?"
+      "second": "Pouvez vous me dire ou je suis ?"
     },
     "btnA": "Qui est-ce ?",
     "btnB": "Oui je vous reçois",
     "actionA" : "/game/3",
-    "actionB" : "/game/2"
+    "actionB" : "/game/2",
+    "scene" : "light-scene"
   },
   "3" : {
     "messages": {

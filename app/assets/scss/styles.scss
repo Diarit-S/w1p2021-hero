@@ -32,3 +32,55 @@ textarea {
   display: inline-block;
   border: none;
 }
+
+.msg-list {
+  background-image: url('../images/ulBackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 183px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  // padding-inline-end: 2px;
+}
+
+.msg-list::-webkit-scrollbar {
+  width: 2px;
+  // display: none;
+}
+.msg-list::-webkit-scrollbar-track {
+  background-color: rgba($color: #000000, $alpha: 0);
+  opacity: 0.1;
+}
+.msg-list::-webkit-scrollbar-thumb {
+  background-color: rgb(134, 139, 59);
+}
+
+li {
+  background-image: url('../images/liBackground.png');
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  color: #78e0b9;
+  height: 66px;
+  width: 184px;
+  max-width: 184px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0 15px 0 15px;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+.dark-scene {
+ background-color: black;
+}
+.light-scene {
+ background-color: white;
+}
