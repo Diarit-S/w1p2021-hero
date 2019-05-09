@@ -3,7 +3,9 @@
     <h1></h1>
     <br />
     <ul ref="msgList" class="msg-list">
-      <li class="message" :class="{'user-choice': isUserChoice(msg) }" v-for="msg in msgTable" :key="msg">{{msg}}</li>
+      <transition-group name="list">
+        <li class="message" :class="{'user-choice': isUserChoice(msg) }" v-for="msg in msgTable" :key="msg">{{msg}}</li>
+      </transition-group>
     </ul>
     <br>
     <br>
@@ -49,7 +51,7 @@ export default {
     actionB(){
       return json[this.id].actionB
     },
-    addScene(){
+    addScene(){ // add a background based on json, linked on css class
       return json[this.id].scene
     },
     

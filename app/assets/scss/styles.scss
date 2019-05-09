@@ -1,8 +1,8 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
-$dark-scene: #262626;
-$light-scene: #0de595;
+$dark: #262626;
+$light: #fcffe1;
 
 body,
 button,
@@ -14,7 +14,7 @@ textarea {
 
 
 .big-header {
-  background-color: $dark-scene;
+  background-color: $dark;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -23,6 +23,7 @@ textarea {
   flex-wrap: wrap;
   flex-direction: column;
   color: white;
+  transition: background-color 1s ease-in-out;
 }
 
 .btn-container {
@@ -71,6 +72,7 @@ textarea {
   overflow-x: hidden;
   overflow-y: scroll;
   padding-right: 2px;
+  transition: scroll 0.5s ease-in-out;
 
   &::-webkit-scrollbar {
     width: 2px;
@@ -116,16 +118,28 @@ textarea {
   padding: 0 15px 0 15px;
   white-space: normal;
   box-sizing: border-box;
+  transition: all 4s;
 }
 
 .dark-scene {
- background-color: black;
+ background-color: $dark;
 }
 .light-scene {
- background-color: white;
+ background-color: $light;
 }
 
 
 .user-choice {
-  color: red;
+  color: white;
+  background-color: rgba($color: #377585, $alpha: 0.4)
+}
+
+
+.list-enter-active, .list-leave-active {
+  transition: all 5s;
+  // transition-delay: 4s;
+}
+
+.list-enter, .list-leave-to {
+  opacity: 0;
 }
