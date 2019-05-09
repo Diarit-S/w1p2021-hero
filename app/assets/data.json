@@ -4,8 +4,8 @@
       "first": "Allo ? qelqu'un me reçoit ?",
       "second": "Est-ce que quelqu'un m'entend ?"
     },
-    "btnA": "Qui est-ce ?",
-    "btnB": "Oui je vous reçois",
+    "btnA": " Qui est-ce ?",
+    "btnB": " Oui je vous reçois",
     "actionA" : "/game/3",
     "actionB" : "/game/2",
     "scene" : "dark-scene"
