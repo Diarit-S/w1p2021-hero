@@ -40,9 +40,20 @@ export default {
     btnA(){
       return json[this.id].btnA
     },
+
+//     JSON.parse(JSON.stringify([1, 2, 3, 'a', 'b', 'c', {a: true}]))
+// (7) [1, 2, 3, "a", "b", "c", {…}]
+
     actionA(){
-      this.addMsgOnTable();
-      this.doScroll();
+      setTimeout(() => {      
+        this.addMsgOnTable();
+        setTimeout(() => {
+          this.doScroll();
+        }, 200);
+      }, 800);
+      // console.log(JSON.parse(JSON.stringify(this.msgTable)));
+      
+      
       return json[this.id].actionA
     },
     btnB(){
@@ -65,9 +76,12 @@ export default {
           }
         });
         console.log(this.msgTable);
+        localStorage.setItem('msg',(JSON.stringify(this.msgTable)));
+        console.log(localStorage.getItem('msg'));
     },
     addChoiceOnTable(value){ // Add the chosen button value on the ul message list, called on btn click and receive the btn value on parameter
       this.msgTable.push(value);
+      this.doScroll();
     },
     doScroll(){ // Function called on each uptade, to let the ul list always scrolled to bottom
       setTimeout(() => {

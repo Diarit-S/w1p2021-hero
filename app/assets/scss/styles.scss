@@ -118,7 +118,7 @@ textarea {
   padding: 0 15px 0 15px;
   white-space: normal;
   box-sizing: border-box;
-  transition: all 4s;
+  transition: all 1s;
 }
 
 .dark-scene {
@@ -136,7 +136,7 @@ textarea {
 
 
 .list-enter-active, .list-leave-active {
-  transition: all 5s;
+  transition: all 1s;
   // transition-delay: 4s;
 }
 
