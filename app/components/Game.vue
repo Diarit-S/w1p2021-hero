@@ -4,7 +4,7 @@
     <br />
     <ul ref="msgList" class="msg-list">
       <transition-group name="list">
-        <li class="message" :class="{'user-choice': isUserChoice(msg) }" v-for="msg in msgTable" :key="msg">{{msg}}</li>
+        <li class="message" :class="{'user-choice': isUserChoice(msg) }" v-for="msg in storagedMsg" :key="msg">{{msg}}</li>
       </transition-group>
     </ul>
     <br>
@@ -27,7 +27,10 @@ export default {
   data(){
     return {
       msgTable : [],
+      storagedMsg : null,
+      memoTable : [], // table to set the local storage 
       test : true,
+
     }
   },
   computed : {
@@ -40,20 +43,13 @@ export default {
     btnA(){
       return json[this.id].btnA
     },
-
-//     JSON.parse(JSON.stringify([1, 2, 3, 'a', 'b', 'c', {a: true}]))
-// (7) [1, 2, 3, "a", "b", "c", {…}]
-
     actionA(){
       setTimeout(() => {      
         this.addMsgOnTable();
         setTimeout(() => {
           this.doScroll();
         }, 200);
-      }, 800);
-      // console.log(JSON.parse(JSON.stringify(this.msgTable)));
-      
-      
+      }, 50);
       return json[this.id].actionA
     },
     btnB(){
@@ -65,10 +61,12 @@ export default {
     addScene(){ // add a background based on json, linked on css class
       return json[this.id].scene
     },
-    
   },
   methods : {
-    addMsgOnTable(){ // Add each messages of the new step, based on the id in data.json file      
+    addMsgOnTable(){ // Add each messages of the new step, based on the id in data.json file 
+        if (this.id == 1) {
+          localStorage.clear();
+        }     
         let stepMsgList = json[this.id].messages
         Object.keys(stepMsgList).forEach(item => {
           if (!this.msgTable.includes(stepMsgList[item])) { // if the message still does not exist 
@@ -76,8 +74,19 @@ export default {
           }
         });
         console.log(this.msgTable);
-        localStorage.setItem('msg',(JSON.stringify(this.msgTable)));
-        console.log(localStorage.getItem('msg'));
+        if (JSON.parse(localStorage.getItem('msg'))) {
+          this.memoTable = JSON.parse(localStorage.getItem('msg'));
+        };
+        this.msgTable.forEach(msg =>{
+          if (this.id == 1 || !this.memoTable.includes(msg)) {
+            this.memoTable.push(msg);
+          }
+        });
+        localStorage.setItem('msg',(JSON.stringify(this.memoTable))); // get each msgTable msg to push them on local storage  UTILISER MAP OU REDUCE 
+        console.log(JSON.parse(localStorage.getItem('msg')));
+        
+        this.storagedMsg = (JSON.parse(localStorage.getItem('msg'))); // add all local storage to an other table to show them on the list 
+
     },
     addChoiceOnTable(value){ // Add the chosen button value on the ul message list, called on btn click and receive the btn value on parameter
       this.msgTable.push(value);
@@ -94,6 +103,6 @@ export default {
       let regex = /^ /;  // regex to see if the parameter start width a space character (all button values start widh a space) 
       return regex.test(msg);
     }
-  }
+  },
 };
 </script>
