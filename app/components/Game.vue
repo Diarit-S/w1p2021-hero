@@ -17,7 +17,8 @@
         <button class="in-button" v-on:click="addChoiceOnTable(btnB)"></button>
       </router-link>
     </div>
-    <audio :src="getSound" autoplay loop></audio>  
+    <audio :src="getSound" autoplay loop></audio>
+    <img :src="getImg" alt="test">  
   </div>
 </template>
 
@@ -63,6 +64,9 @@ export default {
     },
     getSound(){
       return json[this.id].sound
+    },
+    getImg(){
+      return json[this.id].img
     },
     // getSound(){
     //   if (json[this.id].sound) {

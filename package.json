@@ -5,7 +5,8 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "dev": "parcel app/index.html",
+    "copy": "rm -rf dist && mkdir dist && mkdir dist/assets && copy -R app/assets/sounds/ dist/assets",
+    "dev": "npm run copy && parcel app/index.html",
     "build": "parcel build app/index.html",
     "lint": "esw . --ext .js,.vue --watch --color"
   },
