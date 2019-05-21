@@ -20,7 +20,8 @@
     "btnB": " D'accord",
     "actionA" : "/game/3",
     "actionB" : "/game/2",
-    "scene" : "light-scene"
+    "scene" : "light-scene",
+    "sound" : ""
   },
   "3" : {
     "messages": {

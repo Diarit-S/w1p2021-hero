@@ -17,6 +17,7 @@
         <button class="in-button" v-on:click="addChoiceOnTable(btnB)"></button>
       </router-link>
     </div>
+    <audio :src="getSound" autoplay loop></audio>  
   </div>
 </template>
 
@@ -30,7 +31,6 @@ export default {
       storagedMsg : null,
       memoTable : [], // table to set the local storage 
       test : true,
-
     }
   },
   computed : {
@@ -61,17 +61,26 @@ export default {
     addScene(){ // add a background based on json, linked on css class
       return json[this.id].scene
     },
+    getSound(){
+      return json[this.id].sound
+    },
+    // getSound(){
+    //   if (json[this.id].sound) {
+    //     let id = json[this.id].sound;
+    //     return `../assets/sounds/${id}.mp3`;
+    //   }
+    // },
   },
   methods : {
     addMsgOnTable(){ // Add each messages of the new step, based on the id in data.json file 
         if (this.id == 1) {
           localStorage.clear();
-        }     
-        let stepMsgList = json[this.id].messages
+        };    
+        let stepMsgList = json[this.id].messages;
         Object.keys(stepMsgList).forEach(item => {
           if (!this.msgTable.includes(stepMsgList[item])) { // if the message still does not exist 
             this.msgTable.push(stepMsgList[item]);
-          }
+          };
         });
         console.log(this.msgTable);
         if (JSON.parse(localStorage.getItem('msg'))) {
@@ -82,9 +91,7 @@ export default {
             this.memoTable.push(msg);
           }
         });
-        localStorage.setItem('msg',(JSON.stringify(this.memoTable))); // get each msgTable msg to push them on local storage  UTILISER MAP OU REDUCE 
-        console.log(JSON.parse(localStorage.getItem('msg')));
-        
+        localStorage.setItem('msg',(JSON.stringify(this.memoTable))); // get each msgTable msg to push them on local storage
         this.storagedMsg = (JSON.parse(localStorage.getItem('msg'))); // add all local storage to an other table to show them on the list 
 
     },
@@ -102,7 +109,8 @@ export default {
       let msg = text;
       let regex = /^ /;  // regex to see if the parameter start width a space character (all button values start widh a space) 
       return regex.test(msg);
-    }
+    },
+    
   },
 };
 </script>
