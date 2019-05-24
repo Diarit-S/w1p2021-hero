@@ -15,7 +15,7 @@ textarea {
 
 
 .big-header {
-  background-color: $dark;
+  // background-color: $dark;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -149,4 +149,33 @@ textarea {
 
 .list-enter, .list-leave-to {
   opacity: 0;
+}
+
+
+.sounds {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+
+  .cross-music {
+    display: none;
+
+  }
+
+  .isActive {
+    display: block;
+  }
+}
+
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
 }
