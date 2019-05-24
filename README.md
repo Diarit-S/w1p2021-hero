@@ -36,6 +36,8 @@ URL du site : [https://death-line.netlify.com](https://death-line.netlify.com/)
 | Multimédia | L'expérience présente un audio ou plus | OUI |
 | Multimédia | L'utilisateur a la possibilité de couper le son à tout moment | OUI |
 
+![Schema](https://github.com/Diarit-S/w1p2021-hero-salihaj-romain/blob/master/app/assets/images/Group%203.png)
+
 
 ## Prologue
 
