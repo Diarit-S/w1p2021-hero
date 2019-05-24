@@ -42,7 +42,6 @@ export default {
     "actionA" : "/game/5",
     "actionB" : "/game/5",
     "snd" : sounds.vent,
-    "vid" : videos.foret
   },
   "4" : {
     "messages": {
@@ -120,10 +119,10 @@ export default {
       "nine": "Beaucoup trop loin...",
       "ten": " Cooper suffoque, la fumée était toxique, il n'a pas survécu",
     },
-    "btnA": " Ok retourne vers la tour c'est probablement plus sage comme ça",
-    "btnB": " Continue vers la tour tu n'as pas de temps à perdre",
-    "actionA" : "/game/6",
-    "actionB" : "/game/8"
+    "btnA": " Recommencer",
+    "btnB": " Revenir au dernier checkpoint",
+    "actionA" : "/game/1",
+    "actionB" : "/game/7"
   },
   "9" : {
     "messages": {
@@ -162,10 +161,10 @@ export default {
       "seven": "Je ne veux pas mourir ici mec...",
       "height": " Cooper est mort, coincé dans un piège d'origine humaine."
     },
-    "btnA": " Continue à l'intérieur",
-    "btnB": " Repars vers la tour, c'est peut-être un piège",
-    "actionA" : "/game/11",
-    "actionB" : "/game/12"
+    "btnA": " Recommencer",
+    "btnB": " Revenir au derneir checkpoint",
+    "actionA" : "/game/1",
+    "actionB" : "/game/10"
   },
   "12" : {
     "messages": {
@@ -215,8 +214,8 @@ export default {
     },
     "btnA": " Recommencer",
     "btnB": " Revenir au dernier checkpoint",
-    "actionA" : "/game/14",
-    "actionB" : "/game/15"
+    "actionA" : "/game/1",
+    "actionB" : "/game/13"
   },
   "15" : {
     "messages": {
@@ -290,8 +289,8 @@ export default {
     },
     "btnA": " Recommencer",
     "btnB": " Revenir au dernier checkpoint",
-    "actionA" : "/game/20",
-    "actionB" : "/game/20"
+    "actionA" : "/game/1",
+    "actionB" : "/game/18"
   },
   "20" : {
     "messages": {
@@ -342,12 +341,12 @@ export default {
     },
     "btnA": " Recommencer",
     "btnB": " Revenir au dernier checkpoint",
-    "actionA" : "/game/20",
-    "actionB" : "/game/22"  
+    "actionA" : "/game/1",
+    "actionB" : "/game/21"  
   },
   "23" : {
     "messages": {
-      "first": "Je vais fais ça !",
+      "first": "Je vais faire ça !",
       "second": "Ce liquide n'a pas l'air si dangereux",
       "third": "...",
       "fourth": "Ok je rentre dans le marécage",
@@ -385,9 +384,9 @@ export default {
       "sixth": " Celui-ci perds conaissance...",
     },
     "btnA": " Recommencer",
-    "btnB": " Revenir au denrier checkpoint",
-    "actionA" : "/game/26",
-    "actionB" : "/game/25"  
+    "btnB": " Revenir au dernier checkpoint",
+    "actionA" : "/game/1",
+    "actionB" : "/game/24"  
   },
   "26" : {
     "messages": {
@@ -428,7 +427,7 @@ export default {
       "third": "Je vais les rejoindre...",
     },
     "btnA": " Recommencer",
-    "actionA" : "/game/28",
+    "actionA" : "/game/1",
     "vid" : videos.lumiere
   },
 }

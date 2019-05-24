@@ -1,11 +1,15 @@
 <template>
-  <div class="big-header">
-    <h1>Welcome to Death-Line</h1>
-    <p>In this game, you are the hero</p>
-    <p>You have to make choices</p>
-    <p>Click on the button you think it's the better choice</p>
+  <div class="big-header home">
+
+    <div class="home-content">
+
+    <h1>Bienvenue dans Death-Line</h1>
+    <p>Dans ce jeu, vous êtes le hero</p>
+    <p>Vous faites les choix</p>
+    <p>Cliquez sur le bouton qui vous semble être le meilleur choix !</p>
     <br />
-    <router-link class="button" to="/character">Go to Character</router-link>
+    </div>
+    <router-link class="button" to="/game/1">Go to Game</router-link>
   </div>
 </template>
 

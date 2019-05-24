@@ -15,7 +15,7 @@ URL du site : [https://death-line.netlify.com](https://death-line.netlify.com/)
 | Setup | Le site est en ligne, et l'URL est citée dans le README.md | OUI |
 | Setup | Le site utilise VueJS | OUI |
 | Setup | Cloner le repository et exécuter `npm install` puis `npm run dev` s'effectue sans encombre | OUI |
-| Données | Un schéma numérique ou papier (scanné ou photographié) décrivant les différentes étapes et enchaînements possible. Affiché dans ce readme (si plusieurs images sont nécessaires, en afficher plusieurs, mais essayer d'être synthétique). | - |
+| Données | Un schéma numérique ou papier (scanné ou photographié) décrivant les différentes étapes et enchaînements possible. Affiché dans ce readme (si plusieurs images sont nécessaires, en afficher plusieurs, mais essayer d'être synthétique). | OUI |
 | Données | Un fichier `data.json` est utilisé pour stocker la structure du jeu | OUI |
 | Données | Le fichier `data.json` décrit 30 phases de jeu ou plus. Indiquez *En partie* s'il en décrit plus de 15. | OUI |
 | Pages | Une page d'accueil est présente | OUI |
