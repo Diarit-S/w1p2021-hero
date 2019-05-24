@@ -46,10 +46,10 @@
       </svg>
 
     </div>
-      <audio class="sounds__musique" src="../assets/sounds/ambiant.mp3" autoplay loop></audio>
-      <audio class="sounds__ambiant" :src="getSound" autoplay loop></audio>
+
+    <audio class="sounds__musique" src="../assets/sounds/ambiant.mp3" autoplay loop></audio>
+    <audio class="sounds__ambiant" :src="getSound" autoplay loop></audio>
     <video :src="getVid" autoplay loop></video>
-  
   
   </div>
 </template>
@@ -100,7 +100,7 @@ export default {
     getImg(){
       return json[this.id].img
     },
-    getVid(){
+     getVid(){
       return json[this.id].vid
     },
   },

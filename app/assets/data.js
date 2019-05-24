@@ -16,7 +16,7 @@ export default {
     "scene" : "dark-scene",
     "img" : images.test,
     "snd" : sounds.vent,
-    "vid" : videos.poussiere
+    "vid" : videos.pluie
   },
   "2" : {
     "messages": {
@@ -40,7 +40,9 @@ export default {
     "btnA": " Ne paniquez pas je vais vous aider, décrivez moi les alentours",
     "btnB": " Qu'est ce vous voyez ?",
     "actionA" : "/game/5",
-    "actionB" : "/game/5"
+    "actionB" : "/game/5",
+    "snd" : sounds.vent,
+    "vid" : videos.foret
   },
   "4" : {
     "messages": {
@@ -244,7 +246,7 @@ export default {
     "btnA": " Oui ! Tu es arrivé ?",
     "btnB": " Tu en es où Coop ?",
     "actionA" : "/game/17",
-    "actionB" : "/game/17 "
+    "actionB" : "/game/17"
   },
   "17" : {
     "messages": {
@@ -312,7 +314,8 @@ export default {
     "btnA": " Le marécage ! Tu pourras voir le danger s'il y en a",
     "btnB": " Vas dans le champs, le liquide peut être toxique...",
     "actionA" : "/game/23",
-    "actionB" : "/game/21"  
+    "actionB" : "/game/21" ,
+    "vid" : videos.foret
   },
   "21" : {
     "messages": {
@@ -426,5 +429,6 @@ export default {
     },
     "btnA": " Recommencer",
     "actionA" : "/game/28",
+    "vid" : videos.lumiere
   },
 }
